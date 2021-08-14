@@ -57,7 +57,7 @@ while True:
     sleep(0.09)
     if rand.randint(1, 10) <= 4:
         starting_char = rand.randint(1, len(word))
-        backspace_amount = rand.randint(1, starting_char)
+        backspace_amount = rand.randint(1, 4)
         for character in range(starting_char):
             sleep(rand_float_range(type_time_min, type_time_max))
             keyboard.write(word[character])

@@ -7,8 +7,8 @@ used_words = []
 working_words = []
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-type_time_max = 0.2
-type_time_min = 0
+type_time_max = 0.15
+type_time_min = 0.03
 terminal_posX = -800
 jklm_screen_posX = 800
 pos_y = 1000
@@ -56,7 +56,7 @@ while True:
     sleep(0.09)
     if rand.randint(1, 10) <= 4:
         starting_char = rand.randint(1, len(word))
-        backspace_amount = rand.randint(1, starting_char)
+        backspace_amount = rand.randint(1, 4)
         for character in range(starting_char):
             sleep(rand_float_range(type_time_min, type_time_max))
             keyboard.write(word[character])
